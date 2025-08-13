@@ -7,7 +7,8 @@ import Navbar from './components/Navbar.jsx';
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
 import axios from 'axios';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ImageCard from './components/Card.jsx';
 import ImageDetail from './components/ImageDetail';
 
@@ -29,7 +30,7 @@ const App = () => {
   // Return the rendered JSX
   return (
     // Enable routing
-    <BrowserRouter>
+    <Router>
 
       {/* Always show the navbar */}
       <Navbar />
@@ -71,7 +72,7 @@ const App = () => {
         />
         <Route path="/image/:id" element={<ImageDetail />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 };
 
